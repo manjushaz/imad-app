@@ -80,6 +80,12 @@ function createTemplate (data) {
     return htmlTemplate;
 }
 
+app.get('/favicon.ico', function (req, res) {
+
+  res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
+
+});
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -113,11 +119,6 @@ app.get('/ui/IMG-20161126-WA0014.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'IMG-20161126-WA0014.jpg'));
 });
 
-app.get('/favicon.ico', function (req, res) {
-
-  res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
-
-});
 
 
 // Do not change port, otherwise your app won't run on IMAD servers
