@@ -9,12 +9,20 @@ button.onclick = function() {
     
     // Capture the response and store it in avariable
     request.onreadystatechange = function() {
-        if (request.readystate === )
-    }
+        if (request.readystate === XMLHttpRequest.DONE ) {
+            // Take some action.
+            if (request.status === 200) {
+                var counter = request.responseText;
+                var span = document.getElementById('count');
+                span.innerHTML = counter.toString();
+            }
+        }
+        // Not done yet
+        
+    };
     
-    // Render the variable in the correct span
+    // Make the request
     
-    counter = counter + 1;
-    var span = document.getElementById('count');
-    span.innerhtml = counter.toString();
-}
+    request.open('GET', 'http://manjushaz2012.imad.hasura-app.io/counter', true);
+    request.send(null);
+};
