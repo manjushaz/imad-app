@@ -1,7 +1,7 @@
  console.log("things went perfect1");
 // Counter code
 
-butoon.onclick = function() {
+buton.onclick = function() {
     
     var counter = 0;
     counter = counter + 1;
