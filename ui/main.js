@@ -30,3 +30,21 @@ button.onclick = function() {
    request.send(null);
 };
 
+
+// Submit name
+var nameInput = document.getElementById('name');
+var nameValue = nameInput.value;
+var submit = document.getElementById('submitBtn');
+submit.obclick = function() {
+    // Make arequest to the server and send the name
+    
+    // Capture a list of names and render as a list
+    
+    var names=['name1','name2','name3'];
+    var list = '';
+    for (var i=0; i<names.length; i++) {
+        list += '<li>' + names[i] + '</li>'; 
+    }
+    var ul = document.getElementById('namelist');
+    ul.innerHTML = list;
+};
