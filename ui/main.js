@@ -1,15 +1,15 @@
  console.log("things went perfect1");
-// Counter code
 
 var button = document.getElementById('counter');
 
 button.onclick = function() {
-    
     var counter = 0;
-    counter = counter + 1;
+    counter = counter +1;
     var span = document.getElementById('count');
-    span.innerHTML = counter.toString();
+    span.innerHTML = counter.tostring();
+    
 };
+
 //var button = document.getElementById('counter');
 
 //button.onclick = function() {
