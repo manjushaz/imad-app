@@ -12,14 +12,14 @@ button.onclick = function() {
     
     // Capture the response and store it in avariable
     request.onreadystatechange = function() {
-        console.log("things went perfect");
+        console.log("things went perfect3");
         if (request.readystate === XMLHttpRequest.DONE ) {
             // Take some action.
             if (request.status === 200) {
                 var counter = request.responseText;
                 var span = document.getElementById('count');
                 span.innerHTML = counter.toString();
-                console.log("things went perfect");
+                console.log("things went perfect4");
                 console.log(span.innerHTML);
             }
         }
