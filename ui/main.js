@@ -36,15 +36,34 @@ var nameInput = document.getElementById('name');
 var nameValue = nameInput.value;
 var submit = document.getElementById('submitBtn');
 submit.onclick = function() {
-    // Make arequest to the server and send the name
+    
+   // create a request object
+   var request = new XMLHttpRequest();
+   
+   request.onreadystatechange = function () {
+       
+       // Capture the request and store it in a variable
+       
+       if ( request.readyState === XMLHttpRequest.DONE) {
+           // Take some action
+           if (request.status === 200) {
+                var names=['name1','name2','name3','name4'];
+                var list = '';
+                for (var i=0; i<names.length; i++) {
+                    list += '<li>' + names[i] + '</li>'; 
+                }
+                var ul = document.getElementById('namelist');
+                ul.innerHTML = list;
+           }
+       }
+       // Not done yet
+   };
+   
+   // Make the request
+   request.open('GET', 'http://manjushaz2012.imad.hasura-app.io/submit-name?name=' + nameValue, true);
+   request.send(null);
     
     // Capture a list of names and render as a list
     
-    var names=['name1','name2','name3','name4'];
-    var list = '';
-    for (var i=0; i<names.length; i++) {
-        list += '<li>' + names[i] + '</li>'; 
-    }
-    var ul = document.getElementById('namelist');
-    ul.innerHTML = list;
+
 };
