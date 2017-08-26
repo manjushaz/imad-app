@@ -1,11 +1,11 @@
- console.log("things went perfect");
+ console.log("things went perfect1");
 // Counter code
 
 var button = document.getElementById('counter');
 
 button.onclick = function() {
     
-    console.log("things went perfect");
+    console.log("things went perfect2");
 
     // Create a request object
     var request = new XMLHttpRequest();
