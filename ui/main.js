@@ -3,7 +3,9 @@
 var button = document.getElementById('counter');
 
 button.onclick = function() {
+    
     console.log("things went perfect");
+
     // Create a request object
     var request = new XMLHttpRequest();
     
