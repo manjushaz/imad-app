@@ -3,6 +3,7 @@
 var button = document.getElementById('counter');
 
 button.onclick = function() {
+    console.log('counter incremented');
     var counter = 0;
     counter = counter +1;
     var span = document.getElementById('count');
