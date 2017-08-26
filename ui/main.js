@@ -1,3 +1,4 @@
+ console.log("things went perfect");
 // Counter code
 
 var button = document.getElementById('counter');
