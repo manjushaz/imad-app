@@ -101,7 +101,7 @@ app.get('/', function (req, res) {
 });
 
 var pool = new Pool(config);
-//app.get('/test-db', function (req , res) {
+app.get('/test-db', function (req , res) {
     // Make a select request
     // return the result with values
   //  pool.query('SELECT * FROM test', function (err, result) {
@@ -112,7 +112,7 @@ var pool = new Pool(config);
     //        res.send(JSON.stringify(result.rows));
       //  }
     //});
-//});
+});
 
 var counter = 0;
 app.get('/counter', function ( req, res) {
