@@ -95,6 +95,20 @@ app.post('/create-user', function (req, res) {
 });
 
 
+app.post('/login', function (req, res) {
+
+   var username = req.body.username;
+   var password = req.body.password;
+
+   pool.query('SELECT * FROM "user" WHERE username = $1', [username, dbString], function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send('User successfully created: ' + username);
+      }
+   });
+});
+
 app.post('/login', function(req , res) {
 
     var username = req.body.username;
